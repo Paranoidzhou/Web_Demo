@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQ操作内容，值，属性的演示</title>
+<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	function fn1(){
+		console.log($("p:eq(0)").html());
+		console.log($("p:eq(1)").text());
+		$("img").attr("src","../img/05.png");
+		$(":button").val("Bi");
+	}
+</script>
+</head>
+<body>
+	<p>JQuery支持<b>读写</b>节点</p>
+	<p>JQuery支持<b>增删</b>节点</p>
+	<img  src="../img/08.png">
+	<div>
+		<input type="button" value="点点" onclick="fn1();">
+	</div>
+</body>
+</html>

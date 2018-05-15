@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery选择器的演示</title>
+<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//1.基本选择器
+		$("li");
+		$("#gz");
+		$(".b");
+		$("ul li");
+		$("ul>#gz");
+		$("ul .b");
+		//2.层次选择器
+		$("#gz+"); //选择它的弟弟     $("#gz+li");   选择它的下一个li
+		$("#gz~"); //选择它的弟弟们
+		//3.过滤选择器
+		$("li:first");
+		$("li:not(#gz)"); //我要所有的li 除了gz
+		$("li:odd");    //下标为奇数的
+		$("li:even");   //下标为偶数的
+		$("li:empty");       // 查看所有li 是否有空的
+		$("li[style]");       //找li标签里面所有的style                                
+		//4.表单选择器
+	});
+
+</script>
+</head>
+<body>
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li class="b">Bili</li>
+		<li>杭州</li>
+		<li></li>
+		<li style="display: none">澳门</li>
+	</ul>
+		<input type="text" disabled="disabled"><br>        <!--disabled="disabled"  不可用 (状态) -->
+		<input type="text" readonly="readonly">
+		
+		<input type="radio" name="gender" checked="checked">男
+		<input type="radio" name="gender">女 
+</body>
+</html>

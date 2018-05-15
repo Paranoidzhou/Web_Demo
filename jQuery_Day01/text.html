@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQ的二级联动菜单</title>
+<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+var cities=[["石家庄","保定","张家口"],["济南","德州","青岛","蓬莱"],["南京","常州","无锡","张家港"]];
+	function chg(){
+		var index = $("#province").val();
+		var cts = cities[index];
+		//$("#city").html("<option>请选择</option>");
+		
+		
+		//选择器要找到是第二个sel种所有的option
+		//:gt(0)-----> index>0 都删除
+		$("#city option").remove(":gt(0)");
+		if(cts){
+			for(var i=0;i<cts.length;i++){
+				$("#city").append("<option>"+cts[i]+"</option>");
+			}
+		}
+	}
+
+</script>
+</head>
+<body>
+		省:
+    	<select onchange="chg();" id="province">
+    		<option value="-1">请选择</option>
+    		<option value="0">河北省</option>
+    		<option value="1">山东省</option>
+    		<option value="2">江苏省</option>
+    	</select>
+    	市：
+    	<select id="city">
+    		<option>请选择</option>
+    	</select>
+</body>
+</html>
