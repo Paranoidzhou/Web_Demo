@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画演示</title>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	function show(){
+		$("img:eq(0)").show(999,function(){console.log("显示完成");});
+	}
+	function hide(){
+		$("img:eq(0)").hide(999,function(){console.log("隐藏完成");});
+	}
+	function down(){
+		$("div:eq(1)>div").slideDown(999);
+	}	
+	function up(){
+		$("div:eq(1)>div").slideUp(999);
+	}
+	function hint(){
+		$("img:eq(1)").fadeOut(1000).fadeIn(1000);
+	}
+	function movid(){
+		$("img:eq(1)").fadeOut(1000).show(1000).slideUp(1000);
+	}
+	function diy(){
+		$("img").animate({'left':'500px'},500)
+				.animate({'top':'200px'},200)
+				.animate({'left':'0px'},500)
+				.animate({'top':'00px'},200);
+	}
+	</script>
+	<style type="text/css">
+		img{
+			position: relative;
+		}
+		div div{
+			width: 200px;
+			height: 800px;
+			background: #990066;
+			opacity: .3;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="button" value="显示" onclick="show();">
+		<input type="button" value="隐藏" onclick="hide();">
+
+		<input type="button" value="收起" onclick="up();">
+		<input type="button" value="打开" onclick="down();">
+
+		<input type="button" value="淡入淡出" onclick="hint();">
+		
+		<input type="button" value="动动" onclick="diy();">
+	</div>
+	<div>
+		<img alt="" src="../img/11.png"> 
+		<img alt="" src="../img/16.png">
+		<img id="img" alt="" src="../img/06.png">
+		<div></div>
+	</div>	
+</body>
+</html>

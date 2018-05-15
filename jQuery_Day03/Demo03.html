@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟事件，模仿Tmooc首页广告</title>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+				$(":button").click(function(){
+					$("div:eq(0)").slideUp(500);
+				});
+				setTimeout(function(){
+					$(":button").trigger("click");
+				},3000);
+		});
+	</script>
+	<style type="text/css">
+		
+		div{
+			height: 600px;
+			background: #006699;
+			opacity: .3;
+		}
+		div input{
+			margin: 5px;
+			float: right;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<input type="button" value="X">
+	</div>
+</body>
+</html>

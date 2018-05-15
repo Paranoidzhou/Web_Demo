@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery动态事件的绑定+获取event</title>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(":button:first").click(function(event){
+				console.log(event);
+			});
+			$(":button:eq(1)").click(function(){
+				alert("button");
+				return false;
+			});
+			$("p:first").click(function(){
+				alert("p");
+			});
+			$("div:first").click(function(){
+				alert("div");
+			});
+		});
+	</script>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background:#f00;
+		}
+		p{
+			width: 100px;
+			height: 100px;
+			background: #00f;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮" >
+	<div>
+		<p>
+			<input type="button"  value="我要冒泡了" >
+		</p>
+	</div>
+</body>
+</html>
