@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>创建新节点的演示</title>
+<script type="text/javascript">
+	window.onload = function(){
+		//创建新节点
+		var newNode = document.createElement("input");
+		//设置节点信息
+		newNode.setAttribute("type","text");//type 设置成 text
+		newNode.value="Make";
+		newNode.style.color="red";
+		//挂到DOM树上，必须使用父级元素添加新节点
+		//获取父级元素对象
+		var oDiv = document.getElementsByTagName("div")[0];
+		//通过父对象,把新节点挂在父对象下面
+		oDiv.appendChild(newNode);    //append追加
+	}
+
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

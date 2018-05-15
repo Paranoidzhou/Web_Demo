@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数组的演示</title>
+<script type="text/javascript">
+/* 	var arr=["沃槽",123,true,"enen"];
+	var arr1=new Array();
+	arr1[0]="456";
+	arr1.push(23);
+	console.log(arr.reverse()); */
+	
+	var arr=[5,12,3,14,26,1];
+//	console.log(arr.sort());//[1 12 14 26 3 5 ]
+
+/* //修改比较规则,按照数字大小比较
+	function x(a,b){
+		return a-b;
+	}
+	console.log(arr.sort(x));   //[1, 3, 5, 12, 14, 26] */
+	//匿名函数 等同于上面
+	console.log(arr.sort(function (a,b){
+		return a-b;
+	})); 
+</script>
+</head>
+<body>
+	
+</body>
+</html>

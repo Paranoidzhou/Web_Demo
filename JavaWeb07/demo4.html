@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>正则的演示</title>
+<script type="text/javascript">
+	var str="you can you up,no can no bb";
+	var reg=/no/g;
+	//reg.exec(str);
+	//从str中找到匹配正则的子串
+	//普通模式下 返回的是第一个符合要求的子串
+	//全局模式下，第n次执行，返回符合要求的第n个子串
+/* console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str)); */
+	
+//	console.log(reg.test(str));//true 
+	/* var str=" 1";
+	var reg=new RegExp("\\s\\d");   //注意正则表达式必须转译(\\)
+	console.log(reg.test(str)); */
+	
+/*  var str1 = str.replace(reg,"*");//将 reg里面的no替换成*   全局得写g
+	 console.log(str1); */
+	 console.log(str.match(reg));   //["no", "no"] 
+	 console.log(str.search(reg));   //15
+</script>
+</head>
+<body>
+	
+</body>
+</html>

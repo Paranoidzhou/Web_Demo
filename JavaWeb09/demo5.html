@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>节点查询的演示</title>
+<script type="text/javascript">
+	window.onload=function(){
+		//1.根据id查询
+		//var gz = document.getElementById("gz");
+		//2.根据标签层次查询(节点关系)
+		//2.1 查询父节点
+		//console.log(gz.parentNode);
+		//2.2 查询子节点
+		//var oUl = document.getElementsByTagName("ul")[0];
+		
+		//console.log(oUl.childNodes);
+		//查询节点的范围缩小到ul内部（重点）
+		//var oLis = oUl.getElementsByTagName("li");
+		//console.log(oLis);
+		
+		//2.3 查询兄弟节点
+		//某节点.父亲.孩子们[index]
+		/* var gz = document.getElementById("gz");
+		var jms = gz.parentNode.getElementsByTagName("li")[4];
+		console.log(jms); */
+		
+		//2.4 根据name属性查询节点
+		//一般用于查询一组单选 或者 多选
+		var radios = document.getElementsByName("gender");		
+		console.log(radios);
+	}
+</script>
+</head>
+<body>
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li>佳木斯</li>
+		<li>葫芦岛</li>
+	</ul>
+	<div>
+		<input type="radio" name="gender">男
+		<input type="radio" name="gender">女
+	</div>
+</body>
+</html>

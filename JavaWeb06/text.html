@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>扫描二维码</title>
+<script type="text/javascript">
+function check(){
+	var input=document.getElementById("num");
+	var num=input.value;
+	var span = document.getElementById("result");
+	if(isNaN(num)){
+		span.innerHTML="请输入数字";
+	}else{
+		
+	}
+}
+</script>
+</head>
+<body>
+	<input type="text" id="num">
+	<input type="button" value="扫描" onclick="check();">
+	<span id="result">请输入数字</span>
+</body>
+</html>

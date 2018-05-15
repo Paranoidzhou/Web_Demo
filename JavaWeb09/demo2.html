@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM操作</title>
+<script type="text/javascript">
+/* 页面加载事件，页面加载完毕之后被激发 */
+	window.onload = function(){
+	
+	var p1 = document.getElementById("p1");
+	
+	var p2 = document.getElementById("p2");
+	
+	var p3 = document.getElementById("p3");
+	
+//	var p2 = document.getElementsByTagName("p")[1];
+
+	p1.innerText="1.<u>读写</u>节点";              //u是下划线     这里直接显示1.<u>读写</u>节点
+	
+	p2.innerHTML="2.<u>读写</u>节点";             //这里 读写 下面带下划线
+	
+	p3.innerHTML="3.<u>读写</u>节点";   
+	
+	console.log(p1);
+	
+	//console.log(p1.nodeName);//p
+	
+	//console.log(p1.nodeType);//1
+	
+	
+}
+	
+</script>
+</head>
+<body>
+	<p id="p1">1.<b>读写</b>节点</p>
+	<p id="p2">2.<b>查询</b>节点</p>
+	<p id="p3">3.<b>增删</b>节点</p>
+</body>
+</html>

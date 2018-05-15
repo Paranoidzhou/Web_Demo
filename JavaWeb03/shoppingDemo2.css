@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+
+#d0{
+	width: 1000px;
+	height: 376px;
+	margin: 0px auto;
+}
+
+#d1{
+	width: 611px;
+	height: 376px;
+	background-color: #E8E8E8;
+	background-image: url("../images/itemCat/study_computer_img1.png");
+	background-repeat: no-repeat;
+	background-position: 255px 10px;
+	background-size: 330px 330px;
+	margin-left: 2px;
+	margin-right: 10px;
+	float: left; /* 左浮动，为了让块级元素在一行显示*/
+}
+
+#d1:hover{
+	background-size: 480px 400px;
+	background-position: 230px 0px;
+	background-size: 380px 380px;
+}
+
+#d2{
+	width: 245px;
+	height: 232px;
+	margin-top: 68px;
+	margin-left: 36px;
+	pindding: 5px;
+}
+
+#d3{
+	width: 375px;
+	height: 376px;
+	float: left;
+	background-color: #E8E8E8;
+	background-image: url("../images/itemCat/study_computer_img2.png");
+	background-repeat: no-repeat;
+	background-position: 82px 117px;
+	background-size: 280px 232px;
+}
+
+#d3:hover{
+	background-position: 73px 77px;
+	background-size: 300px 300px;
+}
+
+.p1{
+	color:#333;				/* 字体颜色 */
+	font-size:32px;		/* 字体大小*/
+	margin-bottom: 12px; 
+	font-weight: lighter;/* 字体权重（粗细）*/
+	font-family: "黑体";	/*  字体种类 */
+}
+
+.p2{
+	color:#666;
+	margin-bottom: 2px;
+	margin-top: 0px;
+	font-size: 12px;
+	font-weight: lighter;
+	font-family: "黑体";
+}
+
+.p3{
+	color:#0AA1ED;
+	font-weight: bold;
+	margin-bottom: 12px;
+	font-size: 24px;
+}
+
+input{
+	width: 132px;
+	height: 40px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #0AA1ED;
+	font-family: "黑体";
+}

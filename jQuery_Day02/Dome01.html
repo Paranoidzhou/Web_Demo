@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>通过节点关系查找节点</title>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		   console.log($("ul").children());      //查找所有的子节点
+		   console.log($("ul").children("gz"));  //查找指定的子节点
+
+		   console.log($("#gz").prev());		  //查找它哥哥节点
+		   console.log($("#gz").prevAll().css("background","#990066"));   //查找它所有的哥哥节点
+		   console.log($("#gz").next());		  //查找它弟弟节点
+		   console.log($("#gz").nextAll().css("background","#669900"));   //查找它所有的弟弟节点			
+
+		   console.log($("#gz").siblings().css("color","red"));     //查找所有的同胞元素，不包括自己.
+		   console.log($("li").siblings("#gz").css("color","#00f"));   //查找这群兄弟的那一个兄弟
+
+		   console.log($("#gz").parent());
+
+		  $("ul").find("li:not(li[id])").css("color","#999999");
+		  
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>北京</li> 
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li>杭州</li>
+	</ul>
+</body>
+</html>

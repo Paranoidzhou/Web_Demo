@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS读写节点属性</title>
+<script type="text/javascript">
+	window.onload = function(){
+		//1.通过方法读写属性
+		var oImg=document.getElementsByTagName("img")[0];
+		console.log(oImg.getAttribute("src"));
+		console.log(oImg.setAttribute("src","../img/09.png"));
+		
+		//2.通过标准的属性名读写属性
+		//className/id/style
+		var op = document.getElementsByTagName("p")[0];
+		//console.log(op.style.color);
+		op.style.fontSize="20px";
+		
+		//3.通过下标准属性名读写，不推荐
+		//a.href  img.src
+		//使用方法去解决
+		console.log(oImg.src);
+	}
+</script>
+</head>
+<body>
+	<img src="../img/06.png">
+	<p style="color :#f00 ; ">标准属性就那么几个</p>
+</body>
+</html>

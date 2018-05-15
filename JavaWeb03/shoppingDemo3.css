@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+#d0{
+	width: 1000px;
+	height: 376px;
+	margin: 0px auto;
+}
+
+#d1{
+	width: 611px;
+	height: 376px;
+	background-color: #E8E8E8;
+	background-image:url("../images/itemCat/study_stationery_img1.png");
+	background-repeat:no-repeat;
+	background-size:254px 279px;
+	background-position: 52px 45px;
+	margin-left: 2px;
+	margin-right: 10px;
+	float: left; /* 左浮动，为了让块级元素在一行显示*/
+}
+
+#d1:hover{
+	background-size: 279px 306px;
+	background-position: 40px 50px;
+}
+
+#d2{
+	width: 245px;
+	height: 232px;
+	padding: 5px;
+	margin-top: 50px;
+	margin-left: 36px;
+	pindding: 5px;
+	float:right;
+}
+#d4{
+	margin-top:50px;
+	float:right;
+}
+
+#d3{
+	width: 375px;
+	height: 376px;
+	background-color: #E8E8E8;
+	background-image:url("../images/itemCat/study_stationery_img2.png");
+	background-repeat:no-repeat;
+	background-size:130px 230px;
+	background-position:5px 76px;
+	float: left; /* 左浮动，为了让块级元素在一行显示*/
+}
+
+#d3:hover{
+	background-size: 143px 253px;
+	background-position: 0px 65px;
+}
+
+.p1{
+	color: #333;
+	font-size: 32px;
+	margin-bottom: 12px;
+	font-weight: lighter;
+	font-family: "黑体";
+}
+
+.p2{
+	color:#666;
+	margin-bottom: 24px;
+	font-size: 12px;
+	font-weight: lighter;
+	font-family: "黑体";
+}
+
+.p3{
+	color:#E89AA8;
+	font-size: 16px;
+	margin-bottom: 12px;
+	font-family: bold;
+	font-family: "黑体";
+	font-weight: bolder;
+	text-align: left;
+}
+
+.p4{
+	color:#E89AA8;
+	font-size: 16px;
+	margin-top: 52px;
+	margin-bottom: 12px;
+	font-family: bold;
+	font-family: "黑体";
+	font-weight: bolder;
+	text-align: left;
+}
+
+input{
+	background-color: #E89AA8;
+	width: 132px;
+	height: 40px;
+	font-size: 20px;
+	color:#fff;
+	font-family: "黑体";
+}

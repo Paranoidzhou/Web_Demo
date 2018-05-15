@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>假轮播图练习</title>
+<script type="text/javascript">
+	var id;//定时器的ID
+	var n = 1; //轮播总次数  设置为1只为刷新马上显示第一张图
+	var imgs;
+	
+	window.onload=function(){
+		imgs = document.getElementsByTagName("img");
+	
+		imgs[0].className="show";
+		//定时启动轮播
+		go();
+	}
+	
+	function go(){
+		
+		id=setInterval(function(){
+			//计算要显示图片的下标
+			//轮播总次数%数组长度
+			var index = n%imgs.length;
+			//隐藏全部图片
+			for(var i = 0; i<imgs.length; i++){
+			//	imgs[i].className="hide";
+				imgs[i].setAttribute("class","hide");
+			}
+			//显示对的index图片
+			imgs[index].className="show";
+			//轮播总次数+1
+			n++;
+		},500);
+	}
+	
+	function stop(){
+		clearInterval(id);
+	}
+</script>
+<style type="text/css">
+div{
+	width: 256px;
+	height: 256px;
+	margin: 50px auto;
+	border: 2px solid #f00;
+}
+.show{
+	display: none;
+}
+.hide{
+	display: block;
+}
+</style>
+</head>
+<body>
+	<div onmouseover="stop();" onmouseout="go();">
+		<img  src="../img/07.png" class="hide">
+		<img  src="../img/02.png" class="hide">
+		<img  src="../img/09.png" class="hide">
+		<img  src="../img/04.png" class="hide">
+		<img  src="../img/05.png" class="hide">
+		<img  src="../img/06.png" class="hide">
+	</div>
+</body>
+</html>

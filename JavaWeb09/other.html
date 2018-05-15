@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		/* var id = document.getElementById("bj");
+		console.log(id.parentNode); */
+		/* var Ul = document.getElementsTagName("ul")[0];
+		console.log(Ul.childNodes) */
+		/* var Li = document.getElementsByTagName("li");
+		console.log(Li); */
+		var BJ = document.getElementById("bj");
+		console.log(BJ.parentNode.getElementsByTagName("li")[1]);
+	}
+</script>
+</head>
+<body>
+	<ul>
+		<li id="bj">北京</li>
+		<li>上海</li>
+		<li>广州</li>
+		<li>深圳</li>
+		<li>USA</li>
+	</ul>
+</body>
+</html>

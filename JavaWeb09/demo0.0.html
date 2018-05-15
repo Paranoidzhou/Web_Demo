@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Day By Day</title>
+<script type="text/javascript">
+	function fn1(){
+		var Li = document.createElement("li");
+		Li.innerHTML="东百";
+		var Ul = document.getElementsByTagName("ul")[0];
+		Ul.appendChild(Li);
+	}
+	function fn2(){
+		var Li = document.createElement("li");
+		Li.innerHTML="插";
+		var Ul = document.getElementsByTagName("ul")[0];
+		var d = document.getElementById("gz");
+		Ul.insertBefore(Li,d);
+	}
+	function fn3(){
+		var Ul = document.getElementsByTagName("ul")[0];
+		var gz = document.getElementById("gz");
+		Ul.removeChild(gz);
+	}
+</script>
+</head>
+<body>
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li>佳木斯</li>
+	</ul>
+	<div>
+		<input type="button" value="追加" onclick="fn1();">
+		<input type="button" value="插入" onclick="fn2();">
+		<input type="button" value="删除" onclick="fn3();">
+	</div>
+</body>
+</html>

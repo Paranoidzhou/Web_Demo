@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>样式优先级的演示</title>
+	<link rel="stylesheet" href ="style01.css">
+		<style type="text/css">
+			h2{ color:#00f;}
+			
+			#h{ color:#f00;}
+			#h1{ color:#f00;}
+			#h2{ color:#f00;}
+			
+			.col{ color:#006699;}
+			.w100{ 
+					border:1px solid red;
+					width:100px
+			}
+		</style>
+		<link rel="stylesheet" href ="style02.css">
+	</head>
+	<body>
+		<h2> CSS优先级的演示[内部样式与外部样式] </h2>
+		<h3 id="h"> id选择器 </h3>
+		<h3 id="h1"> id选择器 </h3>
+		<h3 id="h2"> id选择器 </h3>
+		<h2 class="col w100"> 类选择器 </h2>
+		<p class="col w100">类选择器</p>
+		<span class="col">类选择器</span>
+	</body>
+</html>

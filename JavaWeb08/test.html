@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>弹出框</title>
+<script type="text/javascript">
+	var id;
+	function start(){
+		
+		var op = document.getElementById("clock");
+		
+		id = setInterval(function(){
+			
+			var d = new Date();
+			
+			var now = d.toLocaleTimeString();
+			
+			op.innerHTML = now;
+			
+		},1000);
+	}
+	function end(){
+		
+		clearInterval(id);
+	}
+</script>
+</head>
+<body>
+	<div>
+		<input type="button" value="开始" onclick="start();">
+		<input type="button" value="停止" onclick="end();">
+		<p id="clock"></p>
+	</div>
+</body>
+</html>

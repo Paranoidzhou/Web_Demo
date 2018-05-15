@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>计算器demo</title>
+<script type="text/javascript">
+	function cal(event){
+		var obj = event.target || event.srcElement;
+		if(obj.nodeName!="INPUT"){
+			return;
+		}
+		var value = obj.value;
+		var op = document.getElementById("screen");
+		if(value=="C"){
+			op.innerHTML="";
+		}else if(value=="="){
+			var exp = op.innerHTML;
+			var r = eval("("+exp+")");
+			op.innerHTML = r;
+		}else{
+			op.innerHTML+=value;
+		}
+	}
+</script>
+<style type="text/css">
+	.panel{
+		border: 4px solid #ddd;
+		margin: 100px auto;
+		width: 192px;
+		border-radius: 3px;
+	}
+	.panel p , .panel input{
+		float: left;
+		font-size: 20px;
+		margin: 4px;
+		border-radius:3px; 
+		font-family: "黑体";
+	}
+	.panel p{
+		width: 122px;
+		height: 26px;
+		border: 1px solid #ddd;
+		overflow: hidden;
+		padding: 6px;
+	}
+	.panel input{
+		width: 40px;
+		height: 40px;
+	}
+</style>
+</head>
+<body>
+<div onclick="cal(event);" class="panel">
+	<div>
+		<p id="screen"></p>
+		<input type="button" value="C" >
+	</div>
+	<div>
+		<input type="button" value="7">
+		<input type="button" value="8">
+		<input type="button" value="9">
+		<input type="button" value="/">
+		
+		<input type="button" value="4">
+		<input type="button" value="5">
+		<input type="button" value="6">
+		<input type="button" value="*">
+		
+		<input type="button" value="1">
+		<input type="button" value="2">
+		<input type="button" value="3">
+		<input type="button" value="-">
+		
+		<input type="button" value="0">
+		<input type="button" value=".">
+		<input type="button" value="=">
+		<input type="button" value="+">
+		<div style="clear: both"></div>
+	</div>
+</div>
+	
+</body>
+</html>

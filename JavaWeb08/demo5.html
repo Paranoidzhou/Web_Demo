@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>模拟发送撤销案例</title>
+<script type="text/javascript">
+	var id;
+	
+	function send(){
+		
+		if(!id){
+			
+			var op = document.getElementById("msg");
+			
+			op.innerHTML="正在发送...";
+			
+			id = setTimeout(function(){
+					
+			op.innerHTML="发送成功";
+						
+			op.className="ok";
+			
+			id = null;
+						
+				   },3000);
+			
+		}
+		
+		
+	}
+	function cancel(){
+		
+		if(id){
+			
+			var op = document.getElementById("msg");
+			
+			op.innerHTML="已撤销";
+			
+			op.className="error";
+			
+			clearInterval(id);
+			
+			id = null;
+		}
+	
+		
+	}
+</script>
+
+<style type="text/css">
+.ok{
+	color: #0f0;
+}
+.error{
+	color: #f00;
+}
+#msg{
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border: 2px solid red;
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<input type="button" value="发送"  onclick="send();">
+		<input type="button" value="取消" onclick="cancel();">
+	</div>
+		<p id="msg"></p>
+</body>
+</html>

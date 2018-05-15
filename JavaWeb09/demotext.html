@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>轮播图练习</title>
+<script type="text/javascript">
+	var id;
+	var imgs;
+	var n = 1;
+	window.onload = function(){
+		imgs = document.getElementsByTagName("img");
+		imgs[0].className="show";
+		go();
+	}
+	function go(){
+		id= setInterval(function(){
+			var index = n%imgs.length;
+			for(var i=0;i<imgs.length;i++){
+				imgs[i].className="hide";
+			}
+			imgs[index].className="show";
+			n++;
+		},500);
+	}
+	function stop(){
+		clearInterval(id);
+	}
+
+</script>
+<style type="text/css">
+div{
+	width: 256px;
+	height: 256px;
+	margin: auto;
+	border: 2px solid #f00;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+</style>
+</head>
+<body>
+	<div onmouseover="stop();" onmouseout="go();">
+		<img src="../img/02.png" class="hide">
+		<img src="../img/06.png" class="hide">
+		<img src="../img/04.png" class="hide">
+		<img src="../img/05.png" class="hide">
+	</div>
+</body>
+</html>

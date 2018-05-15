@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>今日头条</title>
+</head>
+<body>
+	<ul id="ul"></ul>
+</body>
+<script type="text/javascript">
+	var oul=document.getElementById("ul");
+	var str="<li><span><a>[content]</a></span></li>";
+	var contents=["111","222","333","444"];
+	for(var i=0; i<contents.length;i++){
+		oul.innerHTML+=str.replace("[content]",contents[i]);
+	}
+	
+	var arr= [1,5,3,10,85,16,8];
+	console.log(arr.sort(function(a,b){
+		return a-b;
+	}));
+</script>
+</html>
